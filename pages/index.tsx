@@ -4,6 +4,10 @@ import axios from 'axios';
 import { Box, Heading, Stack } from '@chakra-ui/react';
 import useSWR from 'swr';
 
+const instance = axios.create({
+  baseURL: 'https://www.sofascore.com',
+});
+
 const getAllEvent = async () => {
   try {
     const res = await axios.get(
